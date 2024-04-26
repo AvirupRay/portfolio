@@ -3,16 +3,19 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-row h-full">
+    <div className="flex flex-row h-full w-full justify-end items-center">
       {/* Image container*/}
-      <div className="h-full w-full absolute">
-        <Image src="/full.png" alt="" fill className=" object-cover" />
-      </div>
+      <Image
+        src="/full.png"
+        alt=""
+        fill
+        className=" object-cover h-full w-full absolute"
+      />
 
-      <div className=" w-1/4 md:w-2/4 lg:w-2/4"></div>
+      {/*<div className=" w-1/4 md:w-2/4 lg:w-2/4"></div>*/}
 
       {/* Text container*/}
-      <div className="w-3/4 flex flex-col gap-8 items-center justify-center z-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 sm:w-3/4 md:w-2/4 lg:w-2/4">
+      <div className="w-3/4 flex flex-col gap-8 items-center justify-center z-10 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-20 sm:w-3/4 md:w-2/4 lg:w-2/4">
         {/* Title */}
         <h1 className="text-3xl md:text-5xl font-bold ">Avirup Ray</h1>
 
