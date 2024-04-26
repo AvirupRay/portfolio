@@ -6,7 +6,9 @@ import React from "react";
 const NavLink = ({ link }) => {
   const pathname = usePathname();
 
-  console.log(pathname);
+  {
+    /*console.log(pathname);*/
+  }
   return (
     <Link
       className={`rounded p-1 ${
