@@ -9,7 +9,7 @@ const Homepage = () => {
         src="/full.png"
         alt=""
         fill
-        className=" object-cover h-full w-full absolute"
+        className=" object-cover h-full w-full absolute -z-20"
       />
 
       {/*<div className=" w-1/4 md:w-2/4 lg:w-2/4"></div>*/}
