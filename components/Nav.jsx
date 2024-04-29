@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import NavLink from "./NavLink";
 import { motion, stagger } from "framer-motion";
 const links = [
