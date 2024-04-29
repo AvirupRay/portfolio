@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import NavLink from "./NavLink";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
@@ -13,8 +13,11 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 
-export const Nav = () => {
+const Nav = () => {
   const [open, setOpen] = useState(false);
+  {
+    /*motion variants*/
+  }
   const topVarients = {
     closed: {
       rotate: 0,
@@ -41,6 +44,29 @@ export const Nav = () => {
       backgroundColor: "rgb(255,255,255)",
     },
   };
+  const listVarients = {
+    closed: {
+      x: "100vw",
+    },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const listItemVarients = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    opened: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* Links */}
@@ -99,11 +125,16 @@ export const Nav = () => {
         </button>
         {/*MENU LIST*/}
         {open && (
-          <motion.div className=" absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl">
+          <motion.div
+            variants={listVarients}
+            initial="closed"
+            animate="opened"
+            className=" absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl"
+          >
             {links.map((link) => (
-              <Link href={link.url} key={link.title}>
-                {link.title}
-              </Link>
+              <motion.div variants={listItemVarients} key={link.title}>
+                <Link href={link.url}>{link.title}</Link>
+              </motion.div>
             ))}
           </motion.div>
         )}
@@ -111,3 +142,5 @@ export const Nav = () => {
     </div>
   );
 };
+
+export default Nav;
