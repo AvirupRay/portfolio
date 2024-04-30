@@ -37,7 +37,7 @@ const Skills = () => {
       x: 0,
       opacity: 1,
       transition: {
-        whileInView: { opacity: 1 },
+        when: "beforeChildren",
         staggerChildren: 0.2,
       },
     },
