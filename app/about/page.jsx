@@ -6,7 +6,7 @@ import Experience from "@/components/Experience";
 const AboutPage = () => {
   return (
     <motion.div
-      className="h-[600vh]"
+      className="h-[500vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
