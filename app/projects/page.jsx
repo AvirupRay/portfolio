@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-const PortPage = () => {
+const Project = () => {
   return (
     <motion.div
       className="h-[100vh]"
@@ -14,4 +14,4 @@ const PortPage = () => {
   );
 };
 
-export default PortPage;
+export default Project;
