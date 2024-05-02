@@ -1,18 +1,23 @@
-import { Inter } from "next/font/google";
+import { Tangerine } from "next/font/google";
 import "./globals.css";
 import TransitionProvider from "@/components/transitionProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const tangerine = Tangerine({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-tangerine",
+});
 
 export const metadata = {
   title: "Avirup Ray",
   description: "My Portfolio",
+  image: "/images/avirup.jpg",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={tangerine.variable}>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
