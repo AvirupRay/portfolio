@@ -46,7 +46,7 @@ const Skills = () => {
   return (
     <>
       <motion.div
-        className="h-[100vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 overflow-hidden"
+        className="h-[150vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 overflow-hidden"
         initial={{ y: "-200vh" }}
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
@@ -61,7 +61,7 @@ const Skills = () => {
         </motion.h2>
 
         {/* for pc & tablets */}
-        <div className=" h-screen relative md:flex lg:flex items-center justify-center rounded-full bg-circularLight object-cover hidden">
+        <div className=" h-screen relative md:flex lg:flex items-center justify-center rounded-full bg-circularLight object-fill hidden">
           <motion.div
             className="flex items-center justify-center rounded-[50%] font-semibold bg-black text-white p-10 shadow-dark cursor-default"
             whileHover={{ scale: 1.05 }}

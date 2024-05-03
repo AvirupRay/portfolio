@@ -5,3 +5,7 @@
 .tangerine {
   font-family: var(--font-tangerine);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

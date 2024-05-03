@@ -12,12 +12,15 @@ export const metadata = {
   title: "Avirup Ray",
   description: "My Portfolio",
   image: "/images/avirup.jpg",
+  icons: {
+    icon: ["/avirup_logo_2.svg"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={tangerine.variable}>
+      <body className={`${tangerine.variable} scrollbar-hide `}>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>

@@ -78,7 +78,7 @@ const Nav = () => {
       <div className="md:hidden lg:flex justify-center w-1/3">
         <Link
           href="/"
-          className=" text-black rounded-md text-4xl  font-extrabold tangerine"
+          className=" text-black rounded-md text-4xl  font-extrabold tangerine select-none"
         >
           Avirup Ray
         </Link>

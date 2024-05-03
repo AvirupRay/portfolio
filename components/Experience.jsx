@@ -43,10 +43,10 @@ const Experience = () => {
   });
   return (
     <motion.div
-      className="h-[100vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 "
-      initial={{ y: "-200vh" }}
+      className="h-[80vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 "
+      initial={{ y: "-300vh" }}
       animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
     >
       <motion.h2
         className=" font-bold text-6xl mb-10 text-center"
