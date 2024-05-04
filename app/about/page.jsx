@@ -1,13 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Lenis from "lenis";
 const AboutPage = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   return (
     <motion.div
-      className="h-[100vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8"
+      className="h-[800vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -20,7 +33,7 @@ const AboutPage = () => {
           <h1 className="font-bold text-center text-6xl">About me</h1>
 
           {/*BIOGRAPHY DESC*/}
-          <p className="text-lg w-2/3 text-center">
+          <p className="text-xl w-2/3 text-center">
             Hello, I am{" "}
             <span className="font-semibold italic ">Avirup Ray</span>, a
             passionate web-developer. My passion for web development fuels my
@@ -31,7 +44,7 @@ const AboutPage = () => {
           </p>
 
           {/*BIOGRAPHY QUOTE*/}
-          <span className="italic">
+          <span className="italic text-lg">
             " The only way to do great work is to love what you do. "
           </span>
           {/* BIOGRAPHY SCROLL SVG */}

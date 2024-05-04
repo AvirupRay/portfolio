@@ -1,6 +1,8 @@
 "use-client";
 import React from "react";
 import { motion } from "framer-motion";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 const Skill = ({ name, x, y }) => {
   return (
@@ -17,6 +19,18 @@ const Skill = ({ name, x, y }) => {
 };
 
 const Skills = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   const skillVariants = {
     closed: {
       x: -10,

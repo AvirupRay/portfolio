@@ -3,6 +3,8 @@ import React from "react";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 const items = [
   {
@@ -48,9 +50,21 @@ const Project = () => {
   });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   return (
     <motion.div
-      className="h-[100vh]"
+      className="h-[800vh]"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -65,6 +79,10 @@ const Project = () => {
           <div
             className={` sticky flex items-center justify-center h-screen w-screen top-0 bg-gradient-to-t ${item.color} rounded-3xl`}
             key={item.id}
+            style={{
+              top: `calc(-5vh + ${item.id * 25}px)`,
+              scale: x,
+            }}
           >
             <div className="">
               <h1>{item.title}</h1>

@@ -1,10 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcons from "./LiIcon";
+import Lenis from "lenis";
 
 const Details = ({ position, company, CompanyLink, time, address, work }) => {
   const ref = useRef(null);
+
   return (
     <li
       ref={ref}
@@ -41,9 +43,21 @@ const Experience = () => {
     target: ref,
     offset: ["center end", "center center"],
   });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
   return (
     <motion.div
-      className="h-[80vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 "
+      className="h-[100vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 "
       initial={{ y: "-300vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1.5 }}
