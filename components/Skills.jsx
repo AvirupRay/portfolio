@@ -60,7 +60,7 @@ const Skills = () => {
   return (
     <>
       <motion.div
-        className="h-[150vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 overflow-hidden"
+        className="h-[150vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 "
         initial={{ y: "-200vh" }}
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
