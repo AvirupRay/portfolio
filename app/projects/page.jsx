@@ -69,7 +69,7 @@ const Project = () => {
 
   return (
     <motion.div
-      className="h-[800vh]"
+      className="h-[790vh]"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -89,7 +89,7 @@ const Project = () => {
         {items.map((item) => (
           // main div
           <div
-            className={` sticky flex items-center justify-center h-[50vh] lg:h-[80vh] w-[90vw] lg:w-[80vw] top-5 my-32 left-[5vw] lg:left-[10vw] bg-gradient-to-tl ${item.color} rounded-3xl shadow-3xl shadow-${item.shadow}`}
+            className={` sticky flex items-center justify-center h-[50vh] lg:h-[80vh] w-[90vw] lg:w-[80vw] top-5 my-32 left-[5vw] lg:left-[10vw] bg-gradient-to-tl ${item.color} rounded-3xl shadow-3xl shadow-${item.shadow} `}
             key={item.id}
             style={{
               top: `calc( ${item.id * 30}px)`,
@@ -97,14 +97,14 @@ const Project = () => {
             }}
           >
             {/* outer box */}
-            <div className=" h-full w-full rounded-3xl  relative flex flex-col justify-end lg:justify-center p-2">
+            <div className=" h-full w-full rounded-3xl  relative flex flex-col justify-end lg:justify-center p-2 ">
               <video
                 loop
                 width="100%"
                 height="100%"
                 muted
                 autoPlay="autoplay"
-                className="rounded-3xl absolute top-0 left-0 -z-10"
+                className="rounded-3xl absolute top-0 left-0 -z-10 "
               >
                 <source src={item.video} type="video/mp4" />
               </video>

@@ -49,7 +49,7 @@ const Education = () => {
   });
   return (
     <motion.div
-      className="h-[100vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8"
+      className="h-full pt-20 md:pt-14 lg:pt-12 xl:pt-8"
       initial={{ y: "-400vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1.5 }}
@@ -67,7 +67,7 @@ const Education = () => {
           style={{ scaleY: scrollYProgress }}
           className="absolute left-2 md:left-4 lg:left-8 top-0 w-[4px] h-full bg-black origin-top"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-8">
           <Details
             type="Bachelor of Technology"
             special="Computer Science & Engineering (Artificial Intelligence)"
