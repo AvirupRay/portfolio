@@ -74,7 +74,7 @@ const ContactPage = () => {
           <textarea
             name="user_message"
             rows={8}
-            className="bg-red-500 border-b-2 border-b-black outline-none lg:resize-none py-5"
+            className="bg-transparent border-b-2 border-b-black outline-none lg:resize-none py-5"
           />
           <span>My mail address is:</span>
           <input
