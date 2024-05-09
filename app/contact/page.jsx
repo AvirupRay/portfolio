@@ -68,13 +68,13 @@ const ContactPage = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center lg:p-24 p-12"
         >
           <span>Dear Avirup,</span>
           <textarea
             name="user_message"
-            rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            rows={8}
+            className="bg-red-500 border-b-2 border-b-black outline-none lg:resize-none py-5"
           />
           <span>My mail address is:</span>
           <input
