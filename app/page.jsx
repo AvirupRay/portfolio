@@ -3,6 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Project from "./projects/page";
 
 const Homepage = () => {
   return (
@@ -36,12 +38,16 @@ const Homepage = () => {
 
           {/* Button */}
           <div className=" flex gap-4">
-            <button className="p-2 rounded-lg ring-1 ring-black bg-black text-white w-auto text-sm md:text-lg lg:text-xl">
-              View my work
-            </button>
-            <button className="p-2 rounded-lg ring-1 ring-black w-auto text-sm md:text-lg lg:text-xl">
-              contact me
-            </button>
+            <Link href={"/projects"}>
+              <button className="p-2 rounded-lg ring-1 ring-black bg-black text-white w-auto text-sm md:text-lg lg:text-xl">
+                View my work
+              </button>
+            </Link>
+            <Link href={"/contact"}>
+              <button className="p-2 rounded-lg ring-1 ring-black w-auto text-sm md:text-lg lg:text-xl">
+                contact me
+              </button>
+            </Link>
           </div>
         </div>
       </div>

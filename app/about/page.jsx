@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Lenis from "lenis";
+import GoTo from "@/components/GoTo";
 const AboutPage = () => {
   useEffect(() => {
     const lenis = new Lenis();
@@ -20,10 +21,10 @@ const AboutPage = () => {
 
   return (
     <motion.div
-      className="h-[800vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      className="lg:h-[400vh] h-auto md:h-[400vh] pt-20 md:pt-14 lg:pt-12 xl:pt-8 relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
     >
       {/* TEXT CONTAINER */}
       <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
@@ -79,6 +80,7 @@ const AboutPage = () => {
           <Education />
         </div>
       </div>
+      <GoTo />
     </motion.div>
   );
 };
